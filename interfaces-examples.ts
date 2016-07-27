@@ -25,3 +25,16 @@ export interface Book {
     // method signature
     markDamage: (reason: string) => void;
 }
+
+// extending interfaces
+interface LibraryResource {
+    catalogNumber: number;
+}
+
+interface Book2 {
+    title: string;
+}
+
+interface Encyclopedia extends LibraryResource, Book2 {
+    volume: number;
+}

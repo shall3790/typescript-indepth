@@ -1,6 +1,11 @@
 // new ES6 import syntax
-import { Category }   from './enums';
-import { Book }       from './interfaces';
+import { Category }             from './enums';
+import { 
+  Book, 
+  DamageLogger,
+  Author,
+  Librarian
+}                               from './interfaces';
 
 function GetAllBooks(): Book[] {  
   let books: Book[] = [
@@ -114,19 +119,31 @@ function printBook(book: Book): void {
 
 //*******************************************************
 
-let myBook: Book = {
-  id: 5,
-  title: 'Pride and Prejudice',
-  author: 'Jane Austen',
-  available: true,
-  category: Category.Fiction,
-  pages: 250,
-  markDamaged: (reason: string) => console.log('Damaged: ' + reason)
-  
-};
+// let favoriteAuthor: Author = {};
+// let favoriteLibrarian: Librarian = {}
 
-printBook(myBook);
-myBook.markDamaged('missing back cover');
+// let myBook: Book = {
+//   id: 5,
+//   title: 'Pride and Prejudice',
+//   author: 'Jane Austen',
+//   available: true,
+//   category: Category.Fiction,
+//   pages: 250,
+//   markDamaged: (reason: string) => console.log('Damaged: ' + reason)
+  
+// };
+
+// // define interface 
+// let logDamage: DamageLogger;
+// // provide implementation
+// logDamage = (damage:string) => console.log('Damage reported: ' + damage);
+// // call new implementation
+// logDamage('coffee stains');
+
+// printBook(myBook);
+// myBook.markDamaged('missing back cover');
+
+
 
 // let hermansBooks = GetTitles('Herman Melville');
 // // hermansBooks.forEach(title => console.log(title));
