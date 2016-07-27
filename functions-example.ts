@@ -1,4 +1,4 @@
-
+import { Category } from './enums';
 
 let books = [
     {title: 'Ulysses', author: 'James Joyce', available: true, category: Category.Fiction },

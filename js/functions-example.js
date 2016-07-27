@@ -1,8 +1,10 @@
+"use strict";
+var enums_1 = require('./enums');
 var books = [
-    { title: 'Ulysses', author: 'James Joyce', available: true, category: Category.Fiction },
-    { title: 'A Farewell to Arms', author: 'Ernest Hemingway', available: false, category: Category.Fiction },
-    { title: 'I Know Why the Caged Bird Sings', author: 'Maya Angelou', available: true, category: Category.Poetry },
-    { title: 'Moby Dick', author: 'Herman Melville', available: true, category: Category.Fiction }
+    { title: 'Ulysses', author: 'James Joyce', available: true, category: enums_1.Category.Fiction },
+    { title: 'A Farewell to Arms', author: 'Ernest Hemingway', available: false, category: enums_1.Category.Fiction },
+    { title: 'I Know Why the Caged Bird Sings', author: 'Maya Angelou', available: true, category: enums_1.Category.Poetry },
+    { title: 'Moby Dick', author: 'Herman Melville', available: true, category: enums_1.Category.Fiction }
 ];
 function CreateCustomerIdExample(name, id) {
     return name + id;

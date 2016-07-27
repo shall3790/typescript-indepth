@@ -1,3 +1,4 @@
+"use strict";
 var probablyADuck = {
     walk: function () { return console.log('walking like a duck'); },
     swim: function () { return console.log('swimming like a duck'); },

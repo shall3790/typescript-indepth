@@ -1,12 +1,14 @@
-enum Category { Biography, Poetry, Fiction, History, Children }; // 0, 1, 2 (default)
+// new ES6 import syntax
+import { Category }   from './enums';
+import { Book }       from './interfaces';
 
-function GetAllBooks() {
-  let books = [
+function GetAllBooks(): Book[] {  
+  let books: Book[] = [
     { id: 1, title: 'Ulysses', author: 'James Joyce', available: true, category: Category.Fiction },
     { id: 2, title: 'A Farewell to Arms', author: 'Ernest Hemingway', available: false, category: Category.Fiction },
     { id: 3, title: 'I Know Why the Caged Bird Sings', author: 'Maya Angelou', available: true, category: Category.Poetry },
     { id: 4, title: 'Moby Dick', author: 'Herman Melville', available: true, category: Category.Fiction }
-  ]
+  ];
 
   return books;
 }
@@ -48,7 +50,7 @@ function LogBookTitles(titles: string[]): void {
   }
 }
 
-function GetBookById(id: number) : any {
+function GetBookById(id: number) : Book {
   const allBooks = GetAllBooks();
   return allBooks.filter(book => book.id === id)[0];
 }
@@ -106,12 +108,31 @@ function GetTitles(bookProperty: any): string[] {
     return foundTitles;
 }
 
-//*******************************************************
-let hermansBooks = GetTitles('Herman Melville');
-// hermansBooks.forEach(title => console.log(title));
+function printBook(book: Book): void {
+  console.log(book.title + ' by ' + book.author);
+}
 
-let checkedOutBooks = GetTitles(false);
-checkedOutBooks.forEach(title => console.log(title));
+//*******************************************************
+
+let myBook: Book = {
+  id: 5,
+  title: 'Pride and Prejudice',
+  author: 'Jane Austen',
+  available: true,
+  category: Category.Fiction,
+  pages: 250,
+  markDamaged: (reason: string) => console.log('Damaged: ' + reason)
+  
+};
+
+printBook(myBook);
+myBook.markDamaged('missing back cover');
+
+// let hermansBooks = GetTitles('Herman Melville');
+// // hermansBooks.forEach(title => console.log(title));
+
+// let checkedOutBooks = GetTitles(false);
+// checkedOutBooks.forEach(title => console.log(title));
 
 // rest parms
 // let myBooks: string[] = CheckoutBooks('Thorne', 1, 3, 4);

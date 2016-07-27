@@ -12,3 +12,16 @@ let probablyADuck = {
 
 function FlyOverWather(bird: Duck) {}
 FlyOverWather(probablyADuck); // works !!
+
+
+// sample interface
+export interface Book {
+    id: number;
+    title: string;
+    author: string;
+    //optional properties
+    pages?: number;
+
+    // method signature
+    markDamage: (reason: string) => void;
+}
