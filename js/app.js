@@ -1,6 +1,7 @@
 "use strict";
 // new ES6 import syntax
 var enums_1 = require('./enums');
+var classes_1 = require('./classes');
 function GetAllBooks() {
     var books = [
         { id: 1, title: 'Ulysses', author: 'James Joyce', available: true, category: enums_1.Category.Fiction },
@@ -104,6 +105,9 @@ function printBook(book) {
     console.log(book.title + ' by ' + book.author);
 }
 //*******************************************************
+var favoriteLibrarian = new classes_1.UniversityLibrarian();
+favoriteLibrarian.name = 'Sue';
+favoriteLibrarian.assistCustomer('Lynda');
 // let favoriteAuthor: Author = {};
 // let favoriteLibrarian: Librarian = {}
 // let myBook: Book = {

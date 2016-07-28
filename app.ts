@@ -6,6 +6,7 @@ import {
   Author,
   Librarian
 }                               from './interfaces';
+import { UniversityLibrarian }  from './classes';
 
 function GetAllBooks(): Book[] {  
   let books: Book[] = [
@@ -118,6 +119,9 @@ function printBook(book: Book): void {
 }
 
 //*******************************************************
+let favoriteLibrarian: Librarian = new UniversityLibrarian();
+favoriteLibrarian.name = 'Sue';
+favoriteLibrarian.assistCustomer('Lynda');
 
 // let favoriteAuthor: Author = {};
 // let favoriteLibrarian: Librarian = {}
