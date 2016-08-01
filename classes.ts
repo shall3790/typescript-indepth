@@ -56,7 +56,7 @@ export class Encyclopedia extends ReferenceItem {
     }
 
     printCitation(): void {
-        console.log(`${this.title} - ${this.year}`)
+        console.log(`${this.title} - ${this.year}`);
     }
 }
 

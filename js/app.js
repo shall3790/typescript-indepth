@@ -1,7 +1,6 @@
 "use strict";
 // new ES6 import syntax
 var enums_1 = require('./enums');
-var classes_1 = require('./classes');
 function GetAllBooks() {
     var books = [
         { id: 1, title: 'Ulysses', author: 'James Joyce', available: true, category: enums_1.Category.Fiction },
@@ -105,10 +104,17 @@ function printBook(book) {
     console.log(book.title + ' by ' + book.author);
 }
 //*******************************************************
-var refBook = new classes_1.Encyclopedia('WorldPedia', 1990, 10);
+// class expression
+// let NewsPaper = class extends ReferenceItem {
+//   printCitation(): void {
+//      console.log(`Newspaper: ${this.title} - ${this.year}`);
+//   }
+// }
+// let myPaper = new NewsPaper('title', 2015);
+// let refBook = new Encyclopedia('WorldPedia', 1990, 10);
 // we can also do this
 // let refBook: ReferenceItem = new Encyclopedia('WorldPedia', 1990, 10);
-refBook.printItem();
+// refBook.printItem();
 // refBook.printCitation();
 //let ref = new ReferenceItem('Facts and Figures', 2012);
 // ref.publisher = 'Saxson';
