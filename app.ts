@@ -6,7 +6,11 @@ import {
   Author,
   Librarian
 }                               from './interfaces';
-import { UniversityLibrarian }  from './classes';
+import { 
+  UniversityLibrarian,
+  ReferenceItem,
+  Encyclopedia
+}                               from './classes';
 
 function GetAllBooks(): Book[] {  
   let books: Book[] = [
@@ -119,9 +123,21 @@ function printBook(book: Book): void {
 }
 
 //*******************************************************
-let favoriteLibrarian: Librarian = new UniversityLibrarian();
-favoriteLibrarian.name = 'Sue';
-favoriteLibrarian.assistCustomer('Lynda');
+let refBook = new Encyclopedia('WorldPedia', 1990, 10);
+// we can also do this
+// let refBook: ReferenceItem = new Encyclopedia('WorldPedia', 1990, 10);
+refBook.printItem();
+// refBook.printCitation();
+
+//let ref = new ReferenceItem('Facts and Figures', 2012);
+// ref.publisher = 'Saxson';
+// console.log(ref.publisher);
+
+// ref.printItem();
+
+// let favoriteLibrarian: Librarian = new UniversityLibrarian();
+// favoriteLibrarian.name = 'Sue';
+// favoriteLibrarian.assistCustomer('Lynda');
 
 // let favoriteAuthor: Author = {};
 // let favoriteLibrarian: Librarian = {}

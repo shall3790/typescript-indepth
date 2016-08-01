@@ -105,9 +105,18 @@ function printBook(book) {
     console.log(book.title + ' by ' + book.author);
 }
 //*******************************************************
-var favoriteLibrarian = new classes_1.UniversityLibrarian();
-favoriteLibrarian.name = 'Sue';
-favoriteLibrarian.assistCustomer('Lynda');
+var refBook = new classes_1.Encyclopedia('WorldPedia', 1990, 10);
+// we can also do this
+// let refBook: ReferenceItem = new Encyclopedia('WorldPedia', 1990, 10);
+refBook.printItem();
+// refBook.printCitation();
+//let ref = new ReferenceItem('Facts and Figures', 2012);
+// ref.publisher = 'Saxson';
+// console.log(ref.publisher);
+// ref.printItem();
+// let favoriteLibrarian: Librarian = new UniversityLibrarian();
+// favoriteLibrarian.name = 'Sue';
+// favoriteLibrarian.assistCustomer('Lynda');
 // let favoriteAuthor: Author = {};
 // let favoriteLibrarian: Librarian = {}
 // let myBook: Book = {
