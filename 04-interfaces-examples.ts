@@ -26,6 +26,16 @@ export interface Book {
     markDamage: (reason: string) => void;
 }
 
+class MyBook implements Book {
+    id: number;
+    title: string;
+    author: string;
+
+    markDamage(reason:string) : void {
+        console.log('reason: ' + reason);
+    }
+}
+
 // extending interfaces
 interface LibraryResource {
     catalogNumber: number;
@@ -37,4 +47,5 @@ interface Book2 {
 
 interface Encyclopedia extends LibraryResource, Book2 {
     volume: number;
+    
 }

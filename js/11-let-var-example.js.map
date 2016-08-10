@@ -1,0 +1,1 @@
+{"version":3,"file":"11-let-var-example.js","sourceRoot":"","sources":["../11-let-var-example.ts"],"names":[],"mappings":"AAAA;IACI,EAAE,CAAA,CAAC,IAAI,CAAC,CAAC,CAAC;QACN,IAAI,GAAG,GAAG,cAAc,CAAC;QACzB,IAAI,GAAG,GAAG,mBAAmB,CAAC;IAElC,CAAC;IAED,OAAO,CAAC,GAAG,CAAC,GAAG,CAAC,CAAC,CAAC,UAAU;IAC5B,4BAA4B;AAChC,CAAC"}

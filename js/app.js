@@ -61,6 +61,7 @@ function CreateCustomer(name, age, city) {
         console.log('city: ' + city);
     }
 }
+// example of rest parameter
 function CheckoutBooks(customer) {
     var bookIds = [];
     for (var _i = 1; _i < arguments.length; _i++) {

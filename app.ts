@@ -20,6 +20,7 @@ function GetAllBooks(): Book[] {
     { id: 4, title: 'Moby Dick', author: 'Herman Melville', available: true, category: Category.Fiction }
   ];
 
+ 
   return books;
 }
 
@@ -79,6 +80,7 @@ function CreateCustomer(name: string, age?: number, city?: string) {
   }
 }
 
+// example of rest parameter
 function CheckoutBooks(customer: string, ...bookIds: number[]): string[] {
   console.log('Checking out books for ' + customer);
 

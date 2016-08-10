@@ -18,7 +18,7 @@ var arr2 = books.filter(function (book) { return book.author === 'Herman Melvill
 // empty parms
 books.forEach(function () { return console.log('Done reading!'); });
 // passing single parm
-books.forEach(function (title) { return console.log('Done reading!'); });
+books.forEach(function (book) { return console.log('Done reading ' + book.title + '!'); });
 // passing multiple parms 
 // we need to wrap in parentheses unless we have only one!
 books.forEach(function (title, idx, arr) { return console.log(idx + ' - ' + title); });

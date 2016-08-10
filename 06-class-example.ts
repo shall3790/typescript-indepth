@@ -1,6 +1,16 @@
 export class ReferenceItemExample {
+    
+    // private property only accessible inside class
     private numberOfPages: number;
+
     private _editor: string;
+
+    // protected property only accessible inside class
+    // and also subclasses
+    protected variablex: string;
+
+    // default access modifier will be public 
+    foo: string;
 
     constructor(title: string, publisher?: string) {
 
@@ -19,7 +29,7 @@ export class ReferenceItemExample {
     }
 }
 
-// explicitly 
+// explicitly declare class properties
 export class AuthorExample {
     name: string;
 
@@ -50,8 +60,8 @@ export class AuthorExample3 {
 
 let aut = new AuthorExample3('name');
 let name = aut.name; // instance variable
+
 // need to call static on Class, not instance 
 let desc = AuthorExample3.description;
-
 
 let encyclopedia1 = new ReferenceItemExample('WorldPedia', 'WorldPub');

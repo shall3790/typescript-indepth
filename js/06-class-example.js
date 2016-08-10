@@ -19,7 +19,7 @@ var ReferenceItemExample = (function () {
     return ReferenceItemExample;
 }());
 exports.ReferenceItemExample = ReferenceItemExample;
-// explicitly 
+// explicitly declare class properties
 var AuthorExample = (function () {
     function AuthorExample(authorName) {
         name = authorName;

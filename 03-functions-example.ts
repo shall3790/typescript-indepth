@@ -23,7 +23,7 @@ let arr2 = books.filter(book => book.author === 'Herman Melville');
 books.forEach(() => console.log('Done reading!'));
 
 // passing single parm
-books.forEach(title => console.log('Done reading!'));
+books.forEach(book => console.log('Done reading ' + book.title + '!'));
 
 // passing multiple parms 
 // we need to wrap in parentheses unless we have only one!

@@ -44,7 +44,10 @@ export abstract class ReferenceItem {
 // inheritance
 export class Encyclopedia extends ReferenceItem {
     
+
     constructor(newTitle: string, newYear: number, public edition: number) {
+        // if a child class has a constructor,
+        // it's required to call super on parent class
         super(newTitle, newYear);
 
     }
@@ -55,6 +58,7 @@ export class Encyclopedia extends ReferenceItem {
         console.log(`Edition: ${this.edition} (${this.year})`);
     }
 
+    // provide implementation for abstract method
     printCitation(): void {
         console.log(`${this.title} - ${this.year}`);
     }

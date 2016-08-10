@@ -43,6 +43,8 @@ exports.ReferenceItem = ReferenceItem;
 var Encyclopedia = (function (_super) {
     __extends(Encyclopedia, _super);
     function Encyclopedia(newTitle, newYear, edition) {
+        // if a child class has a constructor,
+        // it's required to call super on parent class
         _super.call(this, newTitle, newYear);
         this.edition = edition;
     }
@@ -51,6 +53,7 @@ var Encyclopedia = (function (_super) {
         _super.prototype.printItem.call(this); // not required
         console.log("Edition: " + this.edition + " (" + this.year + ")");
     };
+    // provide implementation for abstract method
     Encyclopedia.prototype.printCitation = function () {
         console.log(this.title + " - " + this.year);
     };

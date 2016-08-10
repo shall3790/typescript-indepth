@@ -6,4 +6,12 @@ var probablyADuck = {
 };
 function FlyOverWather(bird) { }
 FlyOverWather(probablyADuck); // works !!
+var MyBook = (function () {
+    function MyBook() {
+    }
+    MyBook.prototype.markDamage = function (reason) {
+        console.log('reason: ' + reason);
+    };
+    return MyBook;
+}());
 //# sourceMappingURL=04-interfaces-examples.js.map
